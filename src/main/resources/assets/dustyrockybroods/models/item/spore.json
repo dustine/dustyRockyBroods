@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "items/spore_crystal",
+    "layer1": "items/spore_glow"
+  }
+}

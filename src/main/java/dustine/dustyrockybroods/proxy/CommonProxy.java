@@ -1,6 +1,9 @@
 package dustine.dustyrockybroods.proxy;
 
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
+
+import java.util.Map;
 
 public class CommonProxy {
     /**
@@ -13,6 +16,10 @@ public class CommonProxy {
     }
 
     public void clientInit() {
+
+    }
+
+    public void forceInventoryModel(Item itemFromBlock, Map<Integer, String> models) {
 
     }
 }
