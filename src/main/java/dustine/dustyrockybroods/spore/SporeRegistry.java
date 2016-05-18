@@ -1,10 +1,11 @@
-package dustine.dustyrockybroods.utility;
+package dustine.dustyrockybroods.spore;
 
 import dustine.dustyrockybroods.spore.SporeSpecies;
+import dustine.dustyrockybroods.utility.ModLogger;
 
 import java.util.HashMap;
 
-public class SporeHelper {
+public class SporeRegistry {
     private static final HashMap<String, SporeSpecies> SPECIES_MAP = new HashMap<>();
 
     public static void addSporeSpecies(SporeSpecies species) {
