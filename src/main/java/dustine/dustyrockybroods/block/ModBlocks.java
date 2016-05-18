@@ -16,10 +16,6 @@ public class ModBlocks {
         registerBlock(block, name, null, null);
     }
 
-    private static void registerBlock(RockyBlock block, String name, Map<Integer, String> models) {
-        registerBlock(block, name, new ItemBlock(block), models);
-    }
-
     private static void registerBlock(RockyBlock block, String name, ItemBlock itemBlock, Map<Integer, String> models) {
         block.setRegistryName(name);
         block.setUnlocalizedName(name);
@@ -33,7 +29,11 @@ public class ModBlocks {
             itemBlock.setUnlocalizedName(block.getUnlocalizedName());
             GameRegistry.register(itemBlock);
 
-            DustyRockyBroods.PROXY.forceInventoryModel(Item.getItemFromBlock(block), models);
+            DustyRockyBroods.PROXY.forceInventoryModels(Item.getItemFromBlock(block), models);
         }
+    }
+
+    private static void registerBlock(RockyBlock block, String name, Map<Integer, String> models) {
+        registerBlock(block, name, new ItemBlock(block), models);
     }
 }

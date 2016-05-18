@@ -1,10 +1,13 @@
 package dustine.dustyrockybroods.proxy;
 
 import dustine.dustyrockybroods.client.util.ModRenderer;
+import dustine.dustyrockybroods.item.ItemMeshFolder;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 
 import java.util.HashMap;
@@ -22,7 +25,7 @@ public class ClientProxy extends CommonProxy {
     }
 
     @Override
-    public void forceInventoryModel(Item item, Map<Integer, String> models) {
+    public void forceInventoryModels(Item item, Map<Integer, String> models) {
         // if null, default behaviour
         if (models == null) {
             models = new HashMap<>(1);
@@ -33,5 +36,12 @@ public class ClientProxy extends CommonProxy {
             ModelLoader.setCustomModelResourceLocation(item, entry.getKey(),
                     new ModelResourceLocation(item.getRegistryName(), entry.getValue()));
         }
+    }
+
+    @Override
+    public void forceInventoryModels(Item item, ItemMeshFolder itemMesh) {
+        ModelLoader.setCustomMeshDefinition(item, itemMesh);
+        final ResourceLocation[] locations = itemMesh.getAllModelLocations().toArray(new ModelResourceLocation[]{});
+        ModelBakery.registerItemVariants(item, locations);
     }
 }

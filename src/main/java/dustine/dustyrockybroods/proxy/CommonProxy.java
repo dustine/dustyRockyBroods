@@ -1,11 +1,12 @@
 package dustine.dustyrockybroods.proxy;
 
+import dustine.dustyrockybroods.item.ItemMeshFolder;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 
 import java.util.Map;
 
-public class CommonProxy {
+public abstract class CommonProxy {
     /**
      * Returns an instance of EntityPlayerSP on client, null otherwise
      *
@@ -19,7 +20,11 @@ public class CommonProxy {
 
     }
 
-    public void forceInventoryModel(Item itemFromBlock, Map<Integer, String> models) {
+    public void forceInventoryModels(Item itemFromBlock, Map<Integer, String> models) {
+
+    }
+
+    public void forceInventoryModels(Item item, ItemMeshFolder itemMesh) {
 
     }
 }

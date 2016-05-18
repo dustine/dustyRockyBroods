@@ -1,16 +1,18 @@
 [
-{
-  "modid": "dustyrockybroods",
-  "name": "Dusty Rocky Broods",
-  "description": "Skip the middle step, breed rocks directly on Minecraft and get their ill gains.\nYes, rocks. Trying to do it a bit differently with some Lamarkian hints as well.",
-  "version": "${version}",
-  "mcversion": "${mcversion}",
-  "url": "https://github.com/dustine/dustyRockyBroods",
-  "updateUrl": "",
-  "authorList": ["Dustine"],
-  "credits": "The Forge and FML guys, for making this example",
-  "logoFile": "",
-  "screenshots": [],
-  "dependencies": []
-}
+  {
+    "modid": "dustyrockybroods",
+    "name": "Dusty Rocky Broods",
+    "description": "Skip the middle step, breed rocks directly on Minecraft and get their ill gains.\nYes, rocks. Trying to do it a bit differently with some Lamarkian hints as well.",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "https://github.com/dustine/dustyRockyBroods",
+    "updateUrl": "",
+    "authorList": [
+      "Dustine"
+    ],
+    "credits": "The Forge and FML guys, for making this example",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
 ]

@@ -1,6 +1,6 @@
 package dustine.dustyrockybroods.client;
 
-import dustine.dustyrockybroods.spore.SporeSpecies;
+import dustine.dustyrockybroods.spore.species.SporeSpecies;
 import dustine.dustyrockybroods.utility.SporeHelper;
 import net.minecraft.client.renderer.color.IItemColor;
 import net.minecraft.item.ItemStack;
